@@ -1,9 +1,14 @@
+import React from "react";
+import BienvenidaAnimada from "./BienvenidaAnimada";
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-center p-8">
-      <img src="/logo.png" alt="Profesor de Ritmo Logo" className="mx-auto w-32" />
-      <h1 className="text-4xl font-bold mt-4">Profesor de Ritmo</h1>
-      <p className="text-gray-700 mt-2">Una IA generativa musical que enseña, escucha y crea contigo.</p>
+    <div className="min-h-screen bg-white text-gray-900 flex flex-col items-center justify-center p-6">
+      <BienvenidaAnimada />
+      <h1 className="text-3xl font-bold mt-6">Profesor de Ritmo</h1>
+      <p className="text-center text-lg max-w-xl mt-2">
+        Una IA generativa musical que enseña, escucha y crea contigo.
+      </p>
     </div>
   );
 }
