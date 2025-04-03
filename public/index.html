@@ -1,12 +1,84 @@
+Archivo: index.html
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profesor de Ritmo</title>
+    <link href="/dist/output.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg-white text-gray-900">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+
+Archivo: tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+Archivo: postcss.config.js
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+
+Archivo: package.json
+
+{
+  "name": "frontend_profesor_de_ritmo",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2",
+    "vite": "^5.0.0"
+  }
+}
+
+Archivo: README.md
+
+# Frontend Profesor de Ritmo
+
+Este es el proyecto frontend del entorno IA generativa **Profesor de Ritmo**.
+
+## 🚀 Tecnologías
+- React + Vite
+- Tailwind CSS
+- Modularidad para integrar vistas: VistaPrincipal.jsx, VistaGrabacionAudio.jsx, etc.
+
+## 📂 Estructura
+- `index.html`: Entrada principal
+- `src/`: Contiene las vistas y componentes React
+- `public/`: Recursos estáticos
+- `tailwind.config.js`: Configuración de Tailwind
+
+## 🛠️ Scripts útiles
+- `npm install` — Instala dependencias
+- `npm run dev` — Inicia servidor local
+- `npm run build` — Compila para producción
+
+---
+
+© Josué Borges Díaz – Proyecto educativo sin fines de lucro
+
