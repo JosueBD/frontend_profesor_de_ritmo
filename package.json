@@ -7,9 +7,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "i18next": "^23.6.1",
+  "react-i18next": "^13.2.2"
+},
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.14",
