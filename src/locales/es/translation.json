@@ -1,0 +1,11 @@
+{
+  "title": "Profesor de Ritmo",
+  "subtitle": "Una IA generativa musical que enseña, escucha y crea contigo.",
+  "btn_language": "Cambiar a inglés",
+  "btn_png": "🖼️ Ver como PNG",
+  "btn_pdf": "📥 Descargar PDF",
+  "btn_midi": "📥 Descargar MIDI",
+  "btn_wav": "▶️ Escuchar WAV",
+  "label_notes": "🎵 Notas musicales (separadas por espacio)",
+  "placeholder_notes": "Ej: C4 D4 E4 F4 G4 A4 B4 C5"
+}
