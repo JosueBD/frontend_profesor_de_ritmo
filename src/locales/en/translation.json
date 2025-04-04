@@ -1,11 +1,6 @@
 {
   "title": "Rhythm Professor",
-  "subtitle": "A generative music AI that teaches, listens, and creates with you.",
-  "btn_language": "Switch to Spanish",
-  "btn_png": "🖼️ View as PNG",
-  "btn_pdf": "📥 Download PDF",
-  "btn_midi": "📥 Download MIDI",
-  "btn_wav": "▶️ Listen to WAV",
-  "label_notes": "🎵 Musical notes (space-separated)",
-  "placeholder_notes": "E.g. C4 D4 E4 F4 G4 A4 B4 C5"
+  "subtitle": "A generative musical AI that teaches, listens, and creates with you.",
+  "btn_language": "Switch to Spanish"
 }
+
