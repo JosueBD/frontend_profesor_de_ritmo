@@ -1,4 +1,13 @@
 import React from "react";
+import logo from "../public/logo_profesor_de_ritmo.png"; // Asegúrate de que esté en /public/
+
+// Dentro del return de VistaPrincipal:
+<img
+  src={logo}
+  alt="Logo Profesor de Ritmo"
+  className="mx-auto w-32 h-auto mb-4 rounded-full shadow"
+/>
+
 
 export default function VistaPrincipal() {
   return (
