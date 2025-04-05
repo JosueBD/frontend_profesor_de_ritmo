@@ -1,9 +1,3 @@
-
----
-
-## ✅ 2. `BienvenidaAnimada.jsx` – Animación al cargar la app
-
-```jsx
 import { motion } from "framer-motion";
 
 export default function BienvenidaAnimada() {
