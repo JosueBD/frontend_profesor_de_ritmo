@@ -1,63 +1,42 @@
 import React from "react";
-import { useState } from "react";
-import logo from "../public/logo_profesor_de_ritmo_final.png";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
-export default function SidebarLayout({ children, onNavigate }) {
-  const [active, setActive] = useState("inicio");
-
-  const handleNav = (view) => {
-    setActive(view);
-    onNavigate(view);
-  };
+export default function SidebarLayout({ children }) {
+  const { i18n } = useTranslation();
 
   return (
-    <div className="flex min-h-screen bg-gray-100 text-gray-900">
-      {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-lg p-6 flex flex-col items-center">
-        <img
-          src={logo}
-          alt="Profesor de Ritmo"
-          className="w-24 h-24 mb-4 rounded-full"
-        />
-        <h1 className="text-xl font-bold text-center mb-6">Profesor de Ritmo</h1>
+    <div
+      className="min-h-screen flex"
+      style={{
+        backgroundImage: 'url("/fondo_interactivo.png")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Capa oscura para legibilidad */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-0" />
 
-        <nav className="flex flex-col w-full space-y-2">
-          <button
-            className={`py-2 px-4 rounded text-left ${
-              active === "inicio" ? "bg-blue-200 font-semibold" : "hover:bg-gray-200"
-            }`}
-            onClick={() => handleNav("inicio")}
-          >
-            🏠 Inicio
-          </button>
-          <button
-            className={`py-2 px-4 rounded text-left ${
-              active === "grabacion" ? "bg-blue-200 font-semibold" : "hover:bg-gray-200"
-            }`}
-            onClick={() => handleNav("grabacion")}
-          >
-            🎙️ Grabación
-          </button>
-          <button
-            className={`py-2 px-4 rounded text-left ${
-              active === "partitura" ? "bg-blue-200 font-semibold" : "hover:bg-gray-200"
-            }`}
-            onClick={() => handleNav("partitura")}
-          >
-            🎼 Editor de Partitura
-          </button>
-          <a
-            href="https://motores-para-profesor-de-ritmo.onrender.com/docs"
-            target="_blank"
-            className="py-2 px-4 rounded hover:bg-gray-200 text-left"
-          >
-            📚 Documentación API
-          </a>
+      {/* Sidebar */}
+      <aside className="relative z-10 w-64 bg-white bg-opacity-80 backdrop-blur-md shadow-xl p-6">
+        <h2 className="text-2xl font-bold text-center mb-6">Profesor de Ritmo</h2>
+        <nav className="space-y-4">
+          <Link to="inicio" smooth className="block cursor-pointer text-blue-800 hover:underline">🏠 Inicio</Link>
+          <Link to="grabacion" smooth className="block cursor-pointer text-blue-800 hover:underline">🎙️ Grabación</Link>
+          <Link to="editor" smooth className="block cursor-pointer text-blue-800 hover:underline">🎼 Editor</Link>
+          <a href="https://motores-para-profesor-de-ritmo.onrender.com/docs" target="_blank" className="block text-blue-800 hover:underline">📚 API</a>
         </nav>
+
+        {/* Selector de idioma */}
+        <div className="flex justify-center gap-4 mt-10">
+          <button onClick={() => i18n.changeLanguage("es")}>🇪🇸</button>
+          <button onClick={() => i18n.changeLanguage("en")}>🇺🇸</button>
+        </div>
       </aside>
 
-      {/* Contenido dinámico */}
-      <main className="flex-1 p-8 overflow-auto">{children}</main>
+      {/* Contenido */}
+      <main className="relative z-10 flex-1 p-6 text-white">{children}</main>
     </div>
   );
 }
