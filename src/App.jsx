@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import BienvenidaAnimada from "./BienvenidaAnimada";
 import VistaPrincipal from "./VistaPrincipal";
 import VistaGrabacionAudio from "./VistaGrabacionAudio";
+import EditorPartitura from "./EditorPartitura";
+
 
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -26,9 +28,11 @@ export default function App() {
       </header>
 
       <main className="space-y-10">
-        <VistaPrincipal />
-        <VistaGrabacionAudio />
-      </main>
+  <VistaPrincipal />
+  <VistaGrabacionAudio />
+  <EditorPartitura />
+</main>
+
     </div>
   );
 }
