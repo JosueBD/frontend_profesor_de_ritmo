@@ -1,5 +1,7 @@
 {
-  "title": "Rhythm Professor",
-  "subtitle": "A generative musical AI that teaches, listens and creates with you.",
-  "btn_language": "Change language"
+  "bienvenido_titulo": "Welcome to Rhythm Professor",
+  "bienvenido_subtitulo": "Your generative AI to master musical rhythm.",
+  "boton_grabacion": "Start Recording",
+  "boton_editor": "Open Editor",
+  "boton_api": "Access API"
 }
