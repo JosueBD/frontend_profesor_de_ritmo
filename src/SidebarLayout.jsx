@@ -36,7 +36,20 @@ export default function SidebarLayout({ children }) {
       </aside>
 
       {/* Contenido */}
-      <main className="relative z-10 flex-1 p-6 text-white">{children}</main>
+      <main
+  className="flex-1 relative"
+  style={{
+    backgroundImage: "url('/fondo_profesor_de_ritmo.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center"
+  }}
+>
+  <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0"></div>
+  <div className="relative z-10 p-8 text-white space-y-10">
+    {children}
+  </div>
+</main>
+
     </div>
   );
 }
