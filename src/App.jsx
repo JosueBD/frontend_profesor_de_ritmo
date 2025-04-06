@@ -1,45 +1,30 @@
-import React, { useState } from "react";
-import BienvenidaAnimada from "./BienvenidaAnimada";
-import VistaPrincipal from "./VistaPrincipal";
-import VistaGrabacionAudio from "./VistaGrabacionAudio";
-import EditorPartitura from "./EditorPartitura";
-import SidebarLayout from "./SidebarLayout";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import VistaPrincipal from "./vistas/VistaPrincipal";
+import Grabacion from "./vistas/Grabacion";
+import Editor from "./vistas/Editor";
+import Api from "./vistas/Api";
+import SidebarLayout from "./layouts/SidebarLayout";
+import "./i18n"; // Asegura que las traducciones se cargan
 import { useTranslation } from "react-i18next";
-import "./i18n";
 
-export default function App() {
-  const [view, setView] = useState("inicio");
-  const { t, i18n } = useTranslation();
-
-  const renderView = () => {
-    switch (view) {
-      case "grabacion":
-        return <VistaGrabacionAudio />;
-      case "partitura":
-        return <EditorPartitura />;
-      default:
-        return (
-          <>
-            <BienvenidaAnimada />
-            <VistaPrincipal />
-          </>
-        );
-    }
-  };
+function App() {
+  const { t } = useTranslation();
 
   return (
-    <SidebarLayout onNavigate={setView}>
-      {/* Selector de idioma */}
-      <div className="flex justify-end space-x-4 mb-6">
-        <button onClick={() => i18n.changeLanguage("es")} className="text-xl">
-          🇪🇸
-        </button>
-        <button onClick={() => i18n.changeLanguage("en")} className="text-xl">
-          🇺🇸
-        </button>
-      </div>
-
-      {renderView()}
-    </SidebarLayout>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Router>
+        <SidebarLayout>
+          <Routes>
+            <Route path="/" element={<VistaPrincipal />} />
+            <Route path="/grabacion" element={<Grabacion />} />
+            <Route path="/editor" element={<Editor />} />
+            <Route path="/api" element={<Api />} />
+          </Routes>
+        </SidebarLayout>
+      </Router>
+    </Suspense>
   );
 }
+
+export default App;
