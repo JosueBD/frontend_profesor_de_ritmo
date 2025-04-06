@@ -39,7 +39,7 @@ export default function SidebarLayout({ children }) {
       <main
   className="flex-1 relative"
   style={{
-    backgroundImage: "url('/fondo_profesor_de_ritmo.png')",
+    backgroundImage: "url('/fondo_interactivo.png')",
     backgroundSize: "cover",
     backgroundPosition: "center"
   }}
@@ -49,6 +49,7 @@ export default function SidebarLayout({ children }) {
     {children}
   </div>
 </main>
+
 
     </div>
   );
