@@ -1,5 +1,7 @@
 {
-  "title": "Profesor de Ritmo",
-  "subtitle": "Una IA generativa musical que enseña, escucha y crea contigo.",
-  "btn_language": "Cambiar idioma"
+  "bienvenido_titulo": "Bienvenido a Profesor de Ritmo",
+  "bienvenido_subtitulo": "Tu IA generativa para dominar el ritmo musical.",
+  "boton_grabacion": "Empezar Grabación",
+  "boton_editor": "Abrir Editor",
+  "boton_api": "Acceder a la API"
 }
