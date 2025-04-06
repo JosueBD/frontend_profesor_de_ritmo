@@ -7,7 +7,7 @@ export default function SidebarLayout({ children }) {
 
   return (
     <div
-      className="min-h-screen flex"
+      className="min-h-screen flex relative"
       style={{
         backgroundImage: 'url("/fondo_interactivo.png")',
         backgroundSize: "cover",
@@ -15,7 +15,7 @@ export default function SidebarLayout({ children }) {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Capa oscura para legibilidad */}
+      {/* Capa oscura general para contraste */}
       <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-0" />
 
       {/* Sidebar */}
@@ -35,22 +35,13 @@ export default function SidebarLayout({ children }) {
         </div>
       </aside>
 
-      {/* Contenido */}
-      <main
-  className="flex-1 relative"
-  style={{
-    backgroundImage: "url('/fondo_interactivo.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center"
-  }}
->
-  <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0"></div>
-  <div className="relative z-10 p-8 text-white space-y-10">
-    {children}
-  </div>
-</main>
-
-
+      {/* Contenido principal con capa de opacidad y blur */}
+      <main className="flex-1 relative">
+        <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md z-0" />
+        <div className="relative z-10 p-8 text-white space-y-10">
+          {children}
+        </div>
+      </main>
     </div>
   );
 }
