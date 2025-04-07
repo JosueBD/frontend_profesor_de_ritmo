@@ -4,4 +4,17 @@
   "boton_grabacion": "Empezar Grabación",
   "boton_editor": "Abrir Editor",
   "boton_api": "Acceder a la API"
+{
+  "bienvenido_titulo": "Bienvenido a Profesor de Ritmo",
+  "bienvenido_subtitulo": "Tu IA generativa para dominar el ritmo musical.",
+  "boton_grabacion": "Empezar Grabación",
+  "boton_editor": "Abrir Editor",
+  "boton_api": "Acceder a la API",
+  "ritmo_titulo": "Generador de Ritmos",
+  "ritmo_subtitulo": "Crea, reproduce y exporta tus propios patrones rítmicos.",
+  "boton_play": "Reproducir",
+  "boton_stop": "Detener",
+  "boton_exportar_wav": "Exportar como WAV"
+}
+
 }
