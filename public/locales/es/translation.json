@@ -1,0 +1,21 @@
+{
+  "bienvenido_titulo": "Bienvenido a Profesor de Ritmo",
+  "bienvenido_subtitulo": "Tu IA generativa para dominar el ritmo musical.",
+  "boton_grabacion": "Empezar Grabación",
+  "boton_editor": "Abrir Editor",
+  "boton_api": "Acceder a la API",
+  "grabacion_titulo": "Grabación en vivo",
+  "grabacion_subtitulo": "Usa tu micrófono para grabar ritmo o voz.",
+  "boton_iniciar_grabacion": "Iniciar Grabación",
+  "editor_titulo": "Editor de Ritmos",
+  "editor_subtitulo": "Edita tus ritmos en una interfaz visual.",
+  "boton_abrir_editor": "Abrir Editor",
+  "api_titulo": "Acceso a la API",
+  "api_subtitulo": "Integra la IA generativa en tus propias apps musicales.",
+  "boton_documentacion_api": "Ver documentación",
+  "ritmo_titulo": "Generador de Ritmos",
+  "ritmo_subtitulo": "Crea, reproduce y exporta tus propios patrones rítmicos.",
+  "boton_play": "Reproducir",
+  "boton_stop": "Detener",
+  "boton_exportar_wav": "Exportar como WAV"
+}
