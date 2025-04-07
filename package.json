@@ -12,8 +12,11 @@
     "i18next": "^23.6.1",
     "react-i18next": "^13.2.2",
     "i18next-browser-languagedetector": "^7.0.1",
+    "i18next-http-backend": "^2.2.0",
     "framer-motion": "^11.0.0",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "tone": "^14.8.39",
+    "recorder-js": "^1.0.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
