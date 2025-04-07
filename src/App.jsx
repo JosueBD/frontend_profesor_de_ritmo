@@ -4,13 +4,11 @@ import VistaPrincipal from "./vistas/VistaPrincipal";
 import Grabacion from "./vistas/Grabacion";
 import Editor from "./vistas/Editor";
 import Api from "./vistas/Api";
+import Ritmo from "./vistas/Ritmo";
 import SidebarLayout from "./layouts/SidebarLayout";
-import "./i18n"; // Asegura que las traducciones se cargan
-import { useTranslation } from "react-i18next";
+import "./i18n";
 
 function App() {
-  const { t } = useTranslation();
-
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Router>
@@ -20,6 +18,7 @@ function App() {
             <Route path="/grabacion" element={<Grabacion />} />
             <Route path="/editor" element={<Editor />} />
             <Route path="/api" element={<Api />} />
+            <Route path="/ritmo" element={<Ritmo />} />
           </Routes>
         </SidebarLayout>
       </Router>
