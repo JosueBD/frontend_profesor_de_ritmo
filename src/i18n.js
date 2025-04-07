@@ -4,22 +4,22 @@ import Backend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 i18n
-  .use(Backend) // Carga los archivos desde /public/locales/{lng}/translation.json
-  .use(LanguageDetector) // Detecta idioma del navegador automáticamente
-  .use(initReactI18next) // Integración con React
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
-    fallbackLng: "es", // Idioma por defecto si no detecta
+    fallbackLng: "es",
     debug: false,
     interpolation: {
-      escapeValue: false, // React ya se encarga de escapar
+      escapeValue: false
     },
     backend: {
-      loadPath: "/locales/{{lng}}/translation.json",
+      loadPath: "/locales/{{lng}}/translation.json"
     },
     detection: {
       order: ["querystring", "localStorage", "navigator"],
-      caches: ["localStorage"],
-    },
+      caches: ["localStorage"]
+    }
   });
 
 export default i18n;
