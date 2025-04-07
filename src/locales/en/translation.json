@@ -4,4 +4,10 @@
   "boton_grabacion": "Start Recording",
   "boton_editor": "Open Editor",
   "boton_api": "Access API"
+"ritmo_titulo": "Rhythm Generator",
+"ritmo_subtitulo": "Create, play and export your own rhythm patterns.",
+"boton_play": "Play",
+"boton_stop": "Stop",
+"boton_exportar_wav": "Export as WAV"
+
 }
