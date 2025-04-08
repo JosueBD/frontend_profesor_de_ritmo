@@ -13,7 +13,13 @@ const SidebarLayout = ({ children }) => {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white">
+    <div
+      className="flex h-screen overflow-hidden text-white bg-cover bg-center"
+      style={{
+        backgroundImage: 'url("/fondo_interactivo.png")',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <aside className="w-64 p-6 bg-white/20 backdrop-blur-lg shadow-xl flex flex-col justify-between">
         <div>
           <div className="text-3xl font-extrabold text-center text-black drop-shadow mb-8">
@@ -74,7 +80,9 @@ const SidebarLayout = ({ children }) => {
         </div>
       </aside>
 
-      <main className="flex-1 overflow-y-auto p-6">{children}</main>
+      <main className="flex-1 overflow-y-auto p-6">
+        {children}
+      </main>
     </div>
   );
 };
