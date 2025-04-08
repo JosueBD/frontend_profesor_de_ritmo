@@ -21,19 +21,44 @@ const SidebarLayout = ({ children }) => {
           </div>
 
           <nav className="space-y-4">
-            <Link to="/" className={`block px-4 py-2 rounded-full text-center font-semibold ${location.pathname === "/" ? "bg-white text-black" : "hover:bg-white/30"}`}>
+            <Link
+              to="/"
+              className={`block px-4 py-2 rounded-full text-center font-semibold ${
+                location.pathname === "/" ? "bg-white text-black" : "hover:bg-white/30"
+              }`}
+            >
               🏠 Inicio
             </Link>
-            <Link to="/grabacion" className={`block px-4 py-2 rounded-full text-center font-semibold ${location.pathname === "/grabacion" ? "bg-white text-black" : "hover:bg-white/30"}`}>
+            <Link
+              to="/grabacion"
+              className={`block px-4 py-2 rounded-full text-center font-semibold ${
+                location.pathname === "/grabacion" ? "bg-white text-black" : "hover:bg-white/30"
+              }`}
+            >
               🎙️ Grabación
             </Link>
-            <Link to="/editor" className={`block px-4 py-2 rounded-full text-center font-semibold ${location.pathname === "/editor" ? "bg-white text-black" : "hover:bg-white/30"}`}>
+            <Link
+              to="/editor"
+              className={`block px-4 py-2 rounded-full text-center font-semibold ${
+                location.pathname === "/editor" ? "bg-white text-black" : "hover:bg-white/30"
+              }`}
+            >
               🎼 Editor
             </Link>
-            <Link to="/api" className={`block px-4 py-2 rounded-full text-center font-semibold ${location.pathname === "/api" ? "bg-white text-black" : "hover:bg-white/30"}`}>
+            <Link
+              to="/api"
+              className={`block px-4 py-2 rounded-full text-center font-semibold ${
+                location.pathname === "/api" ? "bg-white text-black" : "hover:bg-white/30"
+              }`}
+            >
               📚 API
             </Link>
-            <Link to="/ritmo" className={`block px-4 py-2 rounded-full text-center font-semibold ${location.pathname === "/ritmo" ? "bg-white text-black" : "hover:bg-white/30"}`}>
+            <Link
+              to="/ritmo"
+              className={`block px-4 py-2 rounded-full text-center font-semibold ${
+                location.pathname === "/ritmo" ? "bg-white text-black" : "hover:bg-white/30"
+              }`}
+            >
               🥁 Generador
             </Link>
           </nav>
