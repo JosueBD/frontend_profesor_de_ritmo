@@ -1,29 +1,23 @@
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+// 👇 Asegúrate que estas rutas coincidan con los nombres de archivo
 import VistaPrincipal from "./vistas/VistaPrincipal";
-import Grabacion from "./vistas/Grabacion";
 import Editor from "./vistas/Editor";
 import Api from "./vistas/Api";
 import Ritmo from "./vistas/Ritmo";
-import SidebarLayout from "./layouts/SidebarLayout";
-import "./i18n";
+import VistaGrabacionAudio from "./VistaGrabacionAudio"; // si no está en /vistas
 
-function App() {
+const App = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Router>
-        <SidebarLayout>
-          <Routes>
-            <Route path="/" element={<VistaPrincipal />} />
-            <Route path="/grabacion" element={<Grabacion />} />
-            <Route path="/editor" element={<Editor />} />
-            <Route path="/api" element={<Api />} />
-            <Route path="/ritmo" element={<Ritmo />} />
-          </Routes>
-        </SidebarLayout>
-      </Router>
-    </Suspense>
+    <Routes>
+      <Route path="/" element={<VistaPrincipal />} />
+      <Route path="/editor" element={<Editor />} />
+      <Route path="/api" element={<Api />} />
+      <Route path="/ritmo" element={<Ritmo />} />
+      <Route path="/grabacion" element={<VistaGrabacionAudio />} />
+    </Routes>
   );
-}
+};
 
 export default App;
