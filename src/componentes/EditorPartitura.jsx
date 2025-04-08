@@ -19,7 +19,9 @@ export default function EditorPartitura() {
     });
 
     const url = `https://motores-para-profesor-de-ritmo.onrender.com/escribir_musica?${query.toString()}`;
-    setImagenURL(url);
+console.log("URL generada:", url); // <== Agrega esto
+setImagenURL(url);
+
   };
 
   const handleExportar = (formato) => {
