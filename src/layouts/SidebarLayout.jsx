@@ -80,9 +80,10 @@ const SidebarLayout = ({ children }) => {
         </div>
       </aside>
 
-      <main className="flex-1 overflow-y-auto p-6">
-        {children}
-      </main>
+      <main className="flex-1 overflow-y-auto p-6 backdrop-blur-sm bg-white/5 rounded-xl shadow-inner">
+  {children}
+</main>
+
     </div>
   );
 };
