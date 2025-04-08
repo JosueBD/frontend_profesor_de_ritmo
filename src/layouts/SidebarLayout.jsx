@@ -23,9 +23,10 @@ const SidebarLayout = ({ children }) => {
       <aside className="w-64 p-6 bg-white/20 backdrop-blur-lg shadow-xl flex flex-col justify-between border-r border-white/20">
 
         <div>
-          <div className="text-3xl font-extrabold text-center text-black drop-shadow mb-8">
-            Profesor de Ritmo
-          </div>
+          <div className="sticky top-0 bg-white/30 backdrop-blur-sm z-10 rounded-lg mb-4 p-2 text-center">
+  <div className="text-xl font-extrabold text-black drop-shadow">Profesor de Ritmo</div>
+</div>
+
 
           <nav className="space-y-4">
             <Link
