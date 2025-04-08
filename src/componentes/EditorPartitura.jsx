@@ -36,13 +36,17 @@ export default function EditorPartitura() {
   };
 
   return (
-    <div className="bg-gray-100 p-6 rounded-2xl shadow-md">
+    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md max-w-4xl w-full mx-auto text-white">
       <h2 className="text-2xl font-bold mb-4 text-center">🎼 Editor de Partitura</h2>
 
       <div className="grid md:grid-cols-3 gap-4 mb-4">
         <div>
           <label className="block text-sm font-medium">Clave:</label>
-          <select value={clave} onChange={(e) => setClave(e.target.value)} className="w-full mt-1 p-2 rounded border">
+          <select
+            value={clave}
+            onChange={(e) => setClave(e.target.value)}
+            className="w-full mt-1 p-2 rounded border bg-white text-black"
+          >
             <option value="G">Sol (𝄞)</option>
             <option value="F">Fa (𝄢)</option>
           </select>
@@ -54,7 +58,7 @@ export default function EditorPartitura() {
             type="text"
             value={compas}
             onChange={(e) => setCompas(e.target.value)}
-            className="w-full mt-1 p-2 rounded border"
+            className="w-full mt-1 p-2 rounded border text-black"
             placeholder="Ej: 4/4"
           />
         </div>
@@ -65,7 +69,7 @@ export default function EditorPartitura() {
             type="text"
             value={notas}
             onChange={(e) => setNotas(e.target.value)}
-            className="w-full mt-1 p-2 rounded border"
+            className="w-full mt-1 p-2 rounded border text-black"
             placeholder="Ej: C4 D4 E4 F4"
           />
         </div>
@@ -73,16 +77,27 @@ export default function EditorPartitura() {
 
       <div className="flex items-center justify-center gap-4 mb-6">
         <label className="flex items-center gap-2">
-          <input type="checkbox" checked={mostrarNombres} onChange={() => setMostrarNombres(!mostrarNombres)} />
+          <input
+            type="checkbox"
+            checked={mostrarNombres}
+            onChange={() => setMostrarNombres(!mostrarNombres)}
+          />
           Mostrar nombres
         </label>
 
         <label className="flex items-center gap-2">
-          <input type="checkbox" checked={colorear} onChange={() => setColorear(!colorear)} />
+          <input
+            type="checkbox"
+            checked={colorear}
+            onChange={() => setColorear(!colorear)}
+          />
           Colorear notas
         </label>
 
-        <button onClick={handleGenerar} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        <button
+          onClick={handleGenerar}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
           🎶 Generar Partitura
         </button>
       </div>
@@ -90,18 +105,31 @@ export default function EditorPartitura() {
       {imagenURL && (
         <div className="text-center mb-6">
           <h3 className="text-lg font-semibold mb-2">Vista de la Partitura:</h3>
-          <img src={imagenURL} alt="Partitura generada" className="mx-auto rounded border shadow" />
+          <img
+            src={imagenURL}
+            alt="Partitura generada"
+            className="mx-auto rounded border shadow"
+          />
         </div>
       )}
 
       <div className="flex justify-center gap-4">
-        <button onClick={() => handleExportar("pdf")} className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        <button
+          onClick={() => handleExportar("pdf")}
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+        >
           📄 Exportar PDF
         </button>
-        <button onClick={() => handleExportar("midi")} className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+        <button
+          onClick={() => handleExportar("midi")}
+          className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600"
+        >
           🎵 Exportar MIDI
         </button>
-        <button onClick={() => handleExportar("wav")} className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
+        <button
+          onClick={() => handleExportar("wav")}
+          className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700"
+        >
           🔊 Exportar WAV
         </button>
       </div>
