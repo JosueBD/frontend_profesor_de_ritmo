@@ -3,7 +3,7 @@ import logo from "/logo_profesor_de_ritmo_final.png"; // Ruta pública
 
 export default function VistaPrincipal() {
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-white/10 backdrop-blur-md rounded-xl shadow-lg text-white">
+    <div className="max-w-5xl mx-auto p-6 bg-white/50 backdrop-blur-md rounded-xl shadow-lg text-white">
       {/* Encabezado */}
       <header className="text-center mb-6">
         <img
