@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "/logo_profesor_de_ritmo_final.png"; // Ruta pública
 
 export default function VistaPrincipal() {
   return (
-    <div className="max-w-5xl mx-auto p-6 bg-white/05 backdrop-blur-sm rounded-xl shadow-lg text-white">
+    <div className="max-w-5xl mx-auto p-6 bg-white/50 backdrop-blur-sm rounded-xl shadow-lg text-white">
       {/* Encabezado */}
       <header className="text-center mb-6">
         <img
@@ -21,13 +22,12 @@ export default function VistaPrincipal() {
       <section>
         <h3 className="text-2xl font-semibold text-center mb-4">🎼 Acciones principales</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <a
-            href="https://motores-para-profesor-de-ritmo.onrender.com/escribir_musica?formato=png&texto=C4 D4 E4&clave=G&compas=2/4"
-            target="_blank"
+          <Link
+            to="/editor"
             className="block p-4 bg-blue-500/30 hover:bg-blue-500/50 rounded-lg text-center font-medium"
           >
             🎵 Escribir partitura
-          </a>
+          </Link>
           <a
             href="https://motores-para-profesor-de-ritmo.onrender.com/generar_ritmo"
             target="_blank"
