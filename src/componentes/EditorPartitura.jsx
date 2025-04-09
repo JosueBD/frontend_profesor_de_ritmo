@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import PartituraViewer from "../componentes/PartituraViewer";
+import PartituraViewer from "./PartituraViewer";
 
 const EditorPartitura = () => {
   const [musicXML, setMusicXML] = useState("");
 
   const generarPartitura = async () => {
     try {
-      const texto = "C4 D4 E4 F4"; // Puedes adaptar este texto desde un input si quieres
+      const texto = "C4 D4 E4 F4";
       const res = await fetch(`https://motores-para-profesor-de-ritmo.onrender.com/escribir_musica?texto=${encodeURIComponent(texto)}`, {
         method: "GET",
       });
