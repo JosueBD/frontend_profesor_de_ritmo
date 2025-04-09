@@ -1,4 +1,3 @@
-// src/components/PartituraViewer.jsx
 import React, { useEffect, useRef } from "react";
 import { OpenSheetMusicDisplay } from "opensheetmusicdisplay";
 
