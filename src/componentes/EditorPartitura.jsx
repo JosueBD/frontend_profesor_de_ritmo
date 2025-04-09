@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PartituraViewer from "../components/PartituraViewer";
+import PartituraViewer from "../componentes/PartituraViewer";
 
 const EditorPartitura = () => {
   const [musicXML, setMusicXML] = useState("");
