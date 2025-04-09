@@ -1,0 +1,9 @@
+# render.yaml
+services:
+  - type: web
+    name: motores-para-profesor-de-ritmo
+    env: python
+    buildCommand: ./build.sh
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port 10000
+    plan: free
+    region: oregon
