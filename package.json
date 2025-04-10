@@ -1,7 +1,7 @@
 {
   "name": "profesor-de-ritmo",
   "version": "1.0.0",
-  "description": "IA generativa Profesor de Ritmo - Visualización, reproducción y edición musical",
+  "description": "IA generativa Profesor de Ritmo - Visualización, reproducción, edición y traducción musical",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,7 +15,9 @@
     "tone": "^14.8.39",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "i18next": "^23.6.3",
+    "react-i18next": "^13.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.0",
