@@ -10,7 +10,7 @@ const Editor = () => {
       <h1 className="text-3xl font-bold">
         {t("editor_titulo") || "Editor de Ritmos"}
       </h1>
-      <p className="text-white/80 mb-4">
+      <p className="text-white/80 text-lg">
         {t("editor_subtitulo") || "Edita tus ritmos en una interfaz visual."}
       </p>
 
