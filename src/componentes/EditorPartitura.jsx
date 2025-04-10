@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PartituraViewer from "./PartituraViewer";
 
 const EditorPartitura = () => {
-  const [notas, setNotas] = useState("C4 D4 E4 F4"); // Iniciales
+  const [notas, setNotas] = useState("C4 D4 E4 F4");
   const [musicXML, setMusicXML] = useState("");
   const [error, setError] = useState(null);
 
@@ -19,14 +19,14 @@ const EditorPartitura = () => {
       });
 
       if (!res.ok) {
-        throw new Error("Error al generar la partitura. Verifica las notas o el formato.");
+        throw new Error("Error del servidor al generar la partitura.");
       }
 
       const xml = await res.text();
 
-      // ✅ Validar si el backend responde con XML válido
-      if (!xml.startsWith("<?xml")) {
-        throw new Error("El servidor no devolvió una partitura válida.");
+      // ✅ Validación más segura: evitar XML incompleto o inválido
+      if (!xml || xml.length < 200 || !xml.includes("<score-partwise")) {
+        throw new Error("La partitura generada no es válida o está incompleta.");
       }
 
       setMusicXML(xml);
@@ -60,7 +60,7 @@ const EditorPartitura = () => {
         </div>
       )}
 
-      {/* Visualizador del pentagrama */}
+      {/* Visualización del pentagrama */}
       <div className="bg-white rounded shadow p-4 min-h-[300px]">
         <PartituraViewer musicXML={musicXML} />
       </div>
