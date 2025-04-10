@@ -1,3 +1,23 @@
-node_modules
-dist
-.vite
+# Dependencias
+node_modules/
+dist/
+.vite/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Cachés y archivos generados
+.tailwind-cache/
+.vercel/
+*.log
+*.zip
+
+# Configuración del editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Ignorar carpeta de vistas antigua
+src/vistas/
