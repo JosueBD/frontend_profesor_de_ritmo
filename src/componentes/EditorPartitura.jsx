@@ -23,9 +23,16 @@ const EditorPartitura = () => {
       }
 
       const xml = await res.text();
+
+      // ✅ Validar si el backend responde con XML válido
+      if (!xml.startsWith("<?xml")) {
+        throw new Error("El servidor no devolvió una partitura válida.");
+      }
+
       setMusicXML(xml);
     } catch (err) {
       setError(err.message);
+      setMusicXML(""); // Limpia la visualización si falla
     }
   };
 
@@ -46,8 +53,14 @@ const EditorPartitura = () => {
         🎶 Generar Partitura
       </button>
 
-      {error && <p className="text-red-500">{error}</p>}
+      {/* Mensaje de error si ocurre */}
+      {error && (
+        <div className="text-red-500 text-center mt-2">
+          ⚠️ {error}
+        </div>
+      )}
 
+      {/* Visualizador del pentagrama */}
       <div className="bg-white rounded shadow p-4 min-h-[300px]">
         <PartituraViewer musicXML={musicXML} />
       </div>
