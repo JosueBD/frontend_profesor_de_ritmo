@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Api from "./vistas/Api";
-import Editor from "./vistas/Editor";
-import Generador from "./vistas/Ritmo";
-import Inicio from "./vistas/VistaPrincipal";
+import Api from "./componentes/Api";
+import Editor from "./componentes/EditorPartitura";
+import Generador from "./componentes/Generador"; // O RitmoGenerador si prefieres
+import Inicio from "./componentes/Inicio"; // O BienvenidaAnimada si tienes animación
 import { useTranslation } from "react-i18next";
 
 const App = () => {
@@ -15,11 +15,11 @@ const App = () => {
 
   return (
     <Router>
-      <nav className="p-4 flex gap-4 bg-gray-100">
-        <Link to="/">{t("inicio")}</Link>
-        <Link to="/editor">🎼 {t("editor")}</Link>
-        <Link to="/api">📚 {t("api")}</Link>
-        <Link to="/generador">🥁 {t("generador")}</Link>
+      <nav className="p-4 flex flex-wrap gap-4 bg-gray-100 justify-center text-sm md:text-base">
+        <Link to="/">{t("inicio") || "🏠 Inicio"}</Link>
+        <Link to="/editor">🎼 {t("editor") || "Editor"}</Link>
+        <Link to="/api">📚 {t("api") || "API"}</Link>
+        <Link to="/generador">🥁 {t("generador") || "Generador"}</Link>
         <button onClick={() => cambiarIdioma("es")}>Español</button>
         <button onClick={() => cambiarIdioma("en")}>English</button>
       </nav>
