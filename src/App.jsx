@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import EditorPartitura from "./componentes/EditorPartitura";
-import Generador from "./componentes/Generador";
-import Inicio from "./componentes/Inicio";
-import Api from "./componentes/Api";
+import Api from "./vistas/Api";
+import Editor from "./vistas/Editor";
+import Generador from "./vistas/Ritmo";
+import Inicio from "./vistas/VistaPrincipal";
 import { useTranslation } from "react-i18next";
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
       <div className="p-4">
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/editor" element={<EditorPartitura />} />
+          <Route path="/editor" element={<Editor />} />
           <Route path="/generador" element={<Generador />} />
           <Route path="/api" element={<Api />} />
         </Routes>
