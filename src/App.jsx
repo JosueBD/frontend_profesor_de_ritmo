@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+const App = () => {
+  return (
+    <div style={{ padding: "2rem", fontSize: "24px", color: "green", textAlign: "center" }}>
+      ✅ Hola desde React - Versión mínima activa
+    </div>
+  );
+};
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+export default App;
